@@ -23,4 +23,8 @@ public class mesasService {
         return mesasRepository.save(mesa);
     }
 
+    public Optional<mesasModel> getMesaById(Integer id) {
+        return mesasRepository.findById(id);
+    }
+
 }
