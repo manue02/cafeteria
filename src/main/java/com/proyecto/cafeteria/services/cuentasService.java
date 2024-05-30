@@ -1,5 +1,7 @@
 package com.proyecto.cafeteria.services;
 
+import java.util.List;
+
 import org.springframework.stereotype.Service;
 
 import com.proyecto.cafeteria.models.cuentasModel;
@@ -16,6 +18,10 @@ public class cuentasService {
 
     public cuentasModel saveCuenta(cuentasModel cuenta) {
         return cuentasRepository.save(cuenta);
+    }
+
+    public List<cuentasModel> getAllCuentas() {
+        return cuentasRepository.findAll();
     }
 
 }

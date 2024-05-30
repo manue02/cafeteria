@@ -3,6 +3,7 @@ package com.proyecto.cafeteria.services;
 import java.sql.Time;
 import java.time.LocalDate;
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.stereotype.Service;
 
@@ -28,6 +29,10 @@ public class mesasPagadasService {
 
     public List<mesasPagadasModel> getMesasPagadasByFechaAndHora(LocalDate fecha, Time hora) {
         return mesasPagadasRepository.findByFechaAndHora(fecha, hora);
+    }
+
+    public Optional<mesasPagadasModel> getMesasPagadasById(Integer id) {
+        return mesasPagadasRepository.findById(id);
     }
 
 }
